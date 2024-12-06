@@ -11,17 +11,13 @@
       "types":"./dist/index.d.ts",
       "import":"./dist/index.ts"
     },
-    "./router":{
-      "types":"./dist/router/index.d.ts",
-      "import":"./dist/router/index.ts"
-    },
-    "./store":{
-      "types":"./dist/store/index.d.ts",
-      "import":"./dist/store/index.ts"
+    "./*":{
+      "types":"./dist/*/index.d.ts",
+      "import":"./dist/*/index.ts"
     }
   },
   "scripts": {
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -w -c rollup.config.js"
   },
   "keywords": [],
   "author": "yaxingson <3228891558@qq.com>",
