@@ -6,6 +6,27 @@
 
 ## Functions
 
+### Reactivity
+
+- [ ] [reactive]()
+- [ ] [ref]()
+- [ ] [readonly]()
+- [ ] [computed]()
+- [ ] [track dependency collection]()
+- [ ] [trigger dependency]()
+- [ ] [isReactive]()
+- [ ] [nested reactive]()
+- [ ] [toRaw]()
+- [ ] [isReadonly]()
+
+
+### Compiler
+
+
+### Runtime
+
+
+
 ## FlowChat
 
 ## License
