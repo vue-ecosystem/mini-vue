@@ -195,6 +195,57 @@ flowchart LR
   compiler-core --> compat@{shape: doc, label:"compat"}
   compiler-core --> shared["@vue/shared"]
 
+  compile --> parser
+  compile --> transform
+  compile --> codegen
+  compile --> shared
+  compile --> transforms
+  compile --> compat
+  compile --> errors
+
+  options --> ast
+  options --> errors
+  options --> transform
+  options --> compat
+
+  parser --> ast
+  parser --> options
+  parser --> tokenizer([tokenizer])
+  parser --> compat
+  parser --> shared
+  parser --> errors
+  parser --> utils
+
+  transform --> options
+  transform --> ast
+  transform --> shared
+  transform --> errors
+  transform --> runtimeHelpers
+  transform --> utils
+  transform --> transforms
+  transform --> compat
+
+  codegen --> options
+  codegen --> ast
+  codegen --> utils
+  codegen --> shared
+  codegen --> runtimeHelpers
+  codegen --> transform
+
+  errors --> ast
+
+  ast --> shared
+  ast --> runtimeHelpers
+  ast --> transforms
+  ast --> transform
+
+  utils --> ast
+  utils --> transform
+  utils --> runtimeHelpers
+  utils --> shared
+  utils --> transforms
+  utils --> babelUtils
+
 ```
 
 
