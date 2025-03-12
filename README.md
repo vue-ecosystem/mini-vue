@@ -5,11 +5,12 @@
 Vue3 overall architecture design:
 
 ```mermaid
-flowchart LR
-  subgraph root
+flowchart TB
+  subgraph Project
     subgraph packages
-    compiler-dom[@vue/compiler-dom] --> shared[@vue/shared]
-    compiler-dom --> compiler-core[@vue/compiler-core]
+    compiler-core[@vue/compiler-core] --> shared[@vue/shared]
+    compiler-dom[@vue/compiler-dom] --> shared
+    compiler-dom --> compiler-core
     compiler-sfc[@vue/compiler-sfc] --> compiler-ssr[@vue/compiler-ssr]
     compiler-sfc --> compiler-core
     compiler-sfc -->  compiler-dom
